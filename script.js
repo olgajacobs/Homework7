@@ -5,27 +5,33 @@ console.log(js.toUpperCase());
 
 // task 2
 
-let arr = ['Лодка', 'Парус', 'Белка', 'Кофе', 'Лошадь',]
-let str = 'ло'
-
+function findStartsWith (arr, str) { 
+    
 arr.forEach((el) => {
     if (el.toLowerCase().includes(str.toLowerCase())) {
         console.log(el);
     }
-});
+})
+
+}
+
+findStartsWith(['Лодка', 'Парус', 'Белка', 'Кофе', 'Лошадь',], 'ло');
+
+
 
 // task 3
 
 let number = 32.58884;
 console.log(Math.floor(number));
-console.log(Math.round(number));
 console.log(Math.ceil(number));
+console.log(Math.round(number));
 
 // task 4
 
+const findMinMax = [52, 53, 49, 77, 21, 32]
 
-console.log(Math.max(52, 53, 49, 77, 21, 32));
-console.log(Math.min(52, 53, 49, 77, 21, 32));
+console.log(Math.max(...findMinMax));
+console.log(Math.min(...findMinMax));
 
 // task 5
 
@@ -40,7 +46,7 @@ random(0, 10);
 
 function getRandomNumbers (num) {
     
-    const arr2 = Array.from({length: num / 2}, () => Math.round(Math.random() * (num - 0)) + 0);
+    const arr2 = Array.from({length: num / 2}, () => Math.round(Math.random() * (num + 1)));
     console.log(arr2); 
 }
 
@@ -50,10 +56,10 @@ getRandomNumbers (21);
 // task 7
 
 function randomNumber(x , y) {
-    console.log(Math.round(Math.random()*((Math.round(y) - Math.round(x)) + Math.round(x)))); 
+    console.log(Math.floor(Math.random()*((y - x + 1) + x))); 
 }
 
-randomNumber(2, 10);
+randomNumber(3, 10);
 
 
 // task 8
