@@ -55,8 +55,9 @@ getRandomNumbers (21);
 
 // task 7
 
-function randomNumber(x , y) {
-    console.log(Math.floor(Math.random()*((y - x + 1) + x))); 
+function randomNumber(min , max) {
+    let theNumbesIs = Math.round(Math.random()*(max - min) + min);
+    console.log(theNumbesIs); 
 }
 
 randomNumber(3, 10);
@@ -87,6 +88,7 @@ let noticeDay = "Дата: " + todayDay.getDate() + " " + months[todayDay.getMon
 "Время: " + todayDay.getHours() + ":" + todayDay.getMinutes() + ":" + todayDay.getSeconds()
 
 console.log(noticeDay);
+
 
 
 
